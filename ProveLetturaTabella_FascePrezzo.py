@@ -24,8 +24,6 @@ import os
 
 import pandas as pd
 from itertools import tee, islice, chain
-from ChiamataSincrona import parse_table
-from google.cloud import storage
 import re 
 
 #funzione per identificare elemento precedente e successivo in ciclo loop 

@@ -9,15 +9,9 @@ Created on Sun Dec 13 20:17:33 2020
 #prendo tutti i valori di quella riga e quella tabella e prendo riga del dataframe più vicina a quella dove c'era 2.700
 
 import os
-#os.chdir("D:\Altro\RPA\Energy\IREN\TEST CTE\DocumentAI")
-
-#directory dove salvo i pickle da google cloud
-#OutDir = "D:\Altro\RPA\Energy\IREN\TEST CTE\DocumentAI\Output"
 
 import pandas as pd
 from itertools import tee, islice, chain
-from ChiamataSincrona import parse_table
-from google.cloud import storage
 
 #funzione per identificare elemento precedente e successivo in ciclo loop 
 def previous_and_next(some_iterable):
