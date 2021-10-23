@@ -66,8 +66,8 @@ from pdfminer.converter import TextConverter
 
 if add_selectbox_file is not None:
 
-    filename = add_selectbox_file.split('.')[0]
-    NPICKLE = filename + '.pkl'
+    filename = add_selectbox_file
+    NPICKLE = filename.split('.')[0] + '.pkl'
 
     Result = ElabFile("", filename, NPICKLE)
 
