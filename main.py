@@ -23,7 +23,7 @@ st.sidebar.image(image, width=225)
 #selezione delle commodity (Luce / Gas)
 st.sidebar.subheader("Seleziona la commodity")
 add_selectbox_commodity = st.sidebar.selectbox('',
-                                     ('Energia', 'Gas'))
+                                     ('','Energia', 'Gas'))
 
 
 #selezione file (preimpostato su 2 file pdf
@@ -64,7 +64,7 @@ import io
 
 from pdfminer.converter import TextConverter
 
-if add_selectbox_file != '':
+if add_selectbox_file != '' and add_selectbox_commodity != '':
 
     filename = add_selectbox_file
     NPICKLE = filename.split('.')[0] + '.pkl'
