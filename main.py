@@ -219,10 +219,11 @@ if add_selectbox_file != '' and add_selectbox_commodity != '':
                         unsafe_allow_html=True)
             st.write(CaratteristicheAggiuntive.upper())
 
-
+        import io
         if filename == 'ABEnergie6MesiGreenLuce.pdf':
-            with open(filename, "wb") as inp:
-                savepath = 'show.pdf'
-                with open(savepath, "wb") as f:
-                    f.write(inp.getbuffer())
-                show_pdf(savepath)
+            b = io.BytesIO(filename)
+
+            savepath = 'show.pdf'
+            with open(savepath, "wb") as f:
+                f.write(b.getbuffer())
+            show_pdf(savepath)
