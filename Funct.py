@@ -1233,3 +1233,20 @@ def replaceNumber(Str):
     Str = Str.replace(" VENTI ", "20")
 
     return Str
+
+
+def Promozioni(Doc):
+    ListaPromo = []
+
+    KeyWords = ["REGALO", "REGALI", "VOUCHER", "PREMIO", "PREMI", "PROMOZIONE", "PROMOZIONI", "REGOLAMENTO", "CONCORSO",
+                "OPERAZIONE A PREMI", "MANIFESTAZIONE A PREMI", "INZIATIVA", "BUONO", "AMAZON", "GIFT CARD", "FEDELTA'",
+                "RISPARMIO", "PROGRAMMA FEDELTA'", "PROGRAMMA", "VANTAGGIO", "NOVITA'", "SCONTO"]
+
+    for ww in Doc.split():
+        for kk in KeyWords:
+            if ww == kk:
+                ListaPromo.append(ww)
+
+    ListaPromo = list(dict.fromkeys(ListaPromo))
+
+    return ListaPromo 
