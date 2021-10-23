@@ -11,7 +11,6 @@ from Read_Pdf import read_pdf  # importazione basata sul pacchetto che tiene str
 from Funct import Name
 import base64
 from Loop import ElabFile
-from ChiamataSincrona import parse_table
 import fitz
 import pandas as pd
 import re
