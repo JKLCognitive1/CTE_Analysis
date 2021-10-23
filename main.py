@@ -74,7 +74,7 @@ if add_selectbox_file is not None:
     # elif not os.path.isfile('Cred.json'): #non ho caricato file di credenziali, quindi faccio lettura diretta del file pdf senza passare da google (e non mostro stimaspesaanua)
     # Result = ElabFile("", filename , "")
 
-    Result = Result[Result['Commodity'] == add_selectbox]
+    Result = Result[Result['Commodity'] == add_selectbox_commodity]
 
     if len(Result) == 0:
         st.write("Nel file non ci sono informazioni per la commodity selezionata")
