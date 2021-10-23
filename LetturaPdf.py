@@ -16,7 +16,7 @@ from operator import itemgetter
 import fitz
 import pandas as pd
 import re
-from ClassifyDoc import ClassifyDoc
+from Funct import ClassifyDoc
 
 def fonts(doc, granularity=False):
     """Extracts fonts and their usage in PDF documents.
