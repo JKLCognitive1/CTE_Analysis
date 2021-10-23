@@ -1,6 +1,6 @@
 import re
 import numpy as np
-
+import os
 from ProvePDF import convert_pdf_to_txt
 from LetturaPdf import read_pdf  # importazione basata sul pacchetto che tiene struttura
 from LetturaPdf_2 import \
