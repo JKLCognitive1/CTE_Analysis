@@ -221,7 +221,7 @@ if add_selectbox_file != '' and add_selectbox_commodity != '':
 
 
         if filename == 'ABEnergie6MesiGreenLuce.pdf':
-            with open(filename, "wb") as inp 
+            with open(filename, "wb") as inp:
                 savepath = 'show.pdf'
                 with open(savepath, "wb") as f:
                     f.write(inp.getbuffer())
