@@ -28,7 +28,7 @@ add_selectbox_commodity = st.sidebar.selectbox('',
 
 #selezione file (preimpostato su 2 file pdf
 st.sidebar.subheader("Seleziona un file")
-add_selectbox_file = st.sidebar.selectbox('',
+add_selectbox_file = st.sidebar.selectbox('Seleziona un file',
                                           ('ABEnergie6MesiGreenLuce.pdf',
                                          'Energit-Casa-Web.pdf'))
 
