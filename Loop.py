@@ -6,23 +6,22 @@ from LetturaPdf import read_pdf  # importazione basata sul pacchetto che tiene s
 from LetturaPdf_2 import \
     read_pdf_2  # importaizone basata sulla convert_pdf_to_txt e poi splittata in ele / gas in base ai paragrafi
 
-from ProveDurata import Durata
-from ProveQuoteFissaAnno import PrezzoComponenteDispacciamento, PrezzoComponenteCommVendita
-from ProveScadenza import Scadenza
-from Detect_PrezzoMonorario import PrezzoComponenteEnergia, TipoPrezzo
-from Detect_PrezzoMonorario_GAS import PrezzoComponenteGAS, TipoPrezzo_GAS
-from ProveIdentificazionePromozioni import Promozioni
+from Funct import Durata
+from Funct import PrezzoComponenteDispacciamento, PrezzoComponenteCommVendita
+from Funct import Scadenza
+from Funct import PrezzoComponenteEnergia, TipoPrezzo
+from Funct import PrezzoComponenteGAS, TipoPrezzo_GAS
+from Funct import Promozioni
 
-from ProvePerNomeOfferta import Name
-from SplitPDF_EnergiaGas import SplitPDF
-from ProveGreen import energiaVerde
-from PrezzoF import PrezzoComponenteEnergiaF1, PrezzoComponenteEnergiaF2, PrezzoComponenteEnergiaF3
-from ProveCodiceOfferta import CodiceOfferta
-from ClassifyDoc import ClassifyDoc
+from Funct import Name
+from Funct import SplitPDF
+from Funct import energiaVerde
+from Funct import PrezzoComponenteEnergiaF1, PrezzoComponenteEnergiaF2, PrezzoComponenteEnergiaF3
+from Funct import CodiceOfferta
+from Funct import ClassifyDoc
 
-from ConversioneNumeri import replaceNumber
+from Funct import replaceNumber
 
-# os.chdir("D:\Altro\RPA\Energy\IREN\TEST CTE\DocumentAI")
 from ProveLetturaTabella import StimaSpesaAnnua
 from ProveLetturaTabella_FascePrezzo import StimaSpesaFasce
 
@@ -31,16 +30,6 @@ directory = directory1
 filename = "Agsm_luceweb.pdf"
 '''
 import pandas as pd
-
-DirSplitted = "D:\Altro\RPA\Energy\IREN\TEST CTE\CTE\esempi cte\Pdf_Splitted"
-
-'''
-directory1="D:\Altro\RPA\Energy\IREN\TEST CTE\CTE\esempi cte"
-directory2="D:\Altro\RPA\Energy\IREN\TEST CTE\CTE\esempi cte\Generalizzazione"
-directory = "D:\Altro\RPA\Energy\IREN\TEST CTE\CTE\esempi cte"
-filename = "Sinergy_ValidaFinoNov.pdf"
-'''
-
 
 def ElabFile(directory, filename, NPICKLE):
     Prezzo = ""
@@ -92,15 +81,7 @@ def ElabFile(directory, filename, NPICKLE):
         Energia = replaceNumber(Energia)
         Gas = replaceNumber(Gas)
 
-        # carico cmq tutto il documento anche con prima lettura del pdf che avevo usato (senza struttura)
-        '''
-        try:
-            Doc1 = convert_pdf_to_txt(os.path.join(directory, filename))
-            Doc1 = Doc1.upper()
-            Doc1 = replaceNumber(Doc1)
-        except:
-            pass 
-        '''
+
 
         for Com in Commodity['Class']:
             Res = []
