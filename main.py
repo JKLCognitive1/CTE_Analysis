@@ -218,13 +218,3 @@ if add_selectbox_file != '' and add_selectbox_commodity != '':
             st.markdown("<h3 style='text-align: left; color: black;'>Caratteristiche Aggiuntive:</h1>",
                         unsafe_allow_html=True)
             st.write(CaratteristicheAggiuntive.upper())
-
-        import io
-        if filename == 'ABEnergie6MesiGreenLuce.pdf':
-            with open(filename, 'rb') as f:
-                b = io.BytesIO(f)
-
-            savepath = 'show.pdf'
-            with open(savepath, "wb") as f:
-                f.write(b.getbuffer())
-            show_pdf(savepath)
