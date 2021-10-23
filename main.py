@@ -6,7 +6,6 @@
 import os
 import streamlit as st
 from PIL import Image
-from ElabFile import ElabFile
 from Read_Pdf import read_pdf  # importazione basata sul pacchetto che tiene struttura
 from Funct import Name
 import base64
