@@ -221,7 +221,8 @@ if add_selectbox_file != '' and add_selectbox_commodity != '':
 
         import io
         if filename == 'ABEnergie6MesiGreenLuce.pdf':
-            b = io.BytesIO(filename)
+            with open(filename, 'rb') as f:
+                b = io.BytesIO(f)
 
             savepath = 'show.pdf'
             with open(savepath, "wb") as f:
