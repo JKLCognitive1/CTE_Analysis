@@ -220,7 +220,8 @@ if add_selectbox_file != '' and add_selectbox_commodity != '':
             st.write(CaratteristicheAggiuntive.upper())
 
 
-        savepath = 'show.pdf'
-        with open(savepath, "wb") as f:
-            f.write(filename.getbuffer())
-        show_pdf(savepath)
+        if filename == 'ABEnergie6MesiGreenLuce.pdf':
+            savepath = 'show.pdf'
+            with open(savepath, "wb") as f:
+                f.write('ABEnergie6MesiGreenLuce.pdf'.getbuffer())
+            show_pdf(savepath)
