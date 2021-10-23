@@ -220,13 +220,7 @@ if add_selectbox_file != '' and add_selectbox_commodity != '':
             st.write(CaratteristicheAggiuntive.upper())
 
 
-        def displayPDF(file):
-            with open(file, "rb") as f:
-                base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-
-            pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
-
-            return st.markdown(pdf_display, unsafe_allow_html=True)
-
-
-        displayPDF(filename)
+        savepath = 'show.pdf'
+        with open(savepath, "wb") as f:
+            f.write(filename.getbuffer())
+        show_pdf(savepath)
